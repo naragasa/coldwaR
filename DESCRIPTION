@@ -17,3 +17,5 @@ Suggests:
     rmarkdown
 VignetteBuilder: knitr
 Config/roxygen2/version: 8.0.0
+URL: https://github.com/icay711/coldwaR
+BugReports: https://github.com/icay711/coldwaR/issues
