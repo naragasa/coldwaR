@@ -1,0 +1,19 @@
+Package: coldwaR
+Title: Project 3 Geopolitics package
+Version: 0.0.0.9000
+Authors@R: 
+    person("Drew", "Cloughley", , "dcloughl@calpoly.edu", role = c("aut", "cre"))
+    person("Ian", "Cay", , "icay@calpoly.edu", role = c("aut", "cre"))
+    person("Nicolas", "Ragasa", , "naragasa@calpoly.edu", role = c("aut", "cre"))
+Description: coldwaR is an R package for cleaning and visualizing geopolitical TidyTuesday datasets with simple tools for maps, country-level trends, and international data analysis.
+License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
+    license
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+Imports: 
+    readr
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+Config/roxygen2/version: 8.0.0

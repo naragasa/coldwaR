@@ -1,0 +1,40 @@
+---
+title: "main-functions"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{main-functions}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(coldwaR)
+```
+
+
+```{r}
+plot_gdp_by_category(gov_type)
+```
+
+> This should make a ridgeline plot showing the distributions of GDPs of different government types of countries. The `gdp` variable is specified on the x-axis, and the `gov_type` variable is specified on the y-axis.
+
+
+```{r}
+summarize_pop_by_category(regime_category)
+```
+
+> This should make a summary table showing the distributions of populations of the six different regime categories of countries (including civilian dictatorship, presidential democracy, parliamentary democracy, military dictatorship, mixed democratic, and royal dictatorship. This summary table should display the different regime categories, the count for each of the regime categories, the mean population for each of the regime categories, the median population for each of the regime categories, the standard deviation for each of the regime categories, the standard error for each of the regime categories, the minimum population for each of the regime categories, and the maximum population for each of the regime categories.
+
+
+```{r}
+test_gdp_by_category(regime_category)
+```
+
+> This should make a Welch's ANOVA table for log(GDP) and regime category. This ANOVA table should display the F-statistic, the numerator df, the denominator df, and the p-value.
