@@ -14,8 +14,13 @@ Imports:
     readr
 Suggests: 
     knitr,
-    rmarkdown
+    rmarkdown,
+    testthat (>= 3.0.0)
 VignetteBuilder: knitr
 Config/roxygen2/version: 8.0.0
 URL: https://github.com/icay711/coldwaR
 BugReports: https://github.com/icay711/coldwaR/issues
+Config/testthat/edition: 3
+Depends: 
+    R (>= 3.5)
+LazyData: true
