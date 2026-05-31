@@ -18,4 +18,3 @@ filter_regimes <- function(regimes = c("Parliamentary democracy", "Civilian dict
 
   return(filt)
 }
-
