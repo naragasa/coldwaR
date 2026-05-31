@@ -11,7 +11,7 @@ test_that("filter_gov_types works", {
   expect_s3_class(result_vector,  "data.frame")
 
   expect_equal(
-    sort(unique(result_default$gov_type)),
+    sort(unique(as.character(result_default$gov_type))),
     sort(c("Pure Democracy", "Pure Monarchy", "Democratic Monarchy", "Communist", "Other"))
   )
 

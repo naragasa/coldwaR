@@ -11,7 +11,7 @@ test_that("filter_regimes works", {
   expect_s3_class(result_vector,  "data.frame")
 
   expect_equal(
-    sort(unique(result_default$regime_category)),
+    sort(unique(as.character(result_default$regime_category))),
     sort(c("Parliamentary democracy", "Civilian dictatorship", "Presidential democracy",
            "Military dictatorship", "Mixed democratic", "Royal dictatorship"))
   )
