@@ -6,12 +6,13 @@
 \usage{
 load_data()
 }
-\arguments{
-\item{path}{Path to the CSV file.}
-}
 \value{
 A tibble containing the dataset.
 }
 \description{
-Reads a CSV file into a tibble.
+Reads a CSV file and returns a tibble.
+}
+\examples{
+load_data()
+
 }
