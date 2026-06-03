@@ -7,8 +7,9 @@
 #' @examples
 #' load_data()
 #'
-#' @importFrom readr read_csv
+#' @importFrom arrow read_parquet
+#'
 #' @export
 load_data <- function(){
-  readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2024/2024-11-05/democracy_data.csv')
+  arrow::read_parquet(file = "inst/extdata/country_meta_data.parquet")
 }

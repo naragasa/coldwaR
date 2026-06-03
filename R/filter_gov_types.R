@@ -13,7 +13,7 @@ filter_gov_types <- function(types = c("Pure Democracy", "Pure Monarchy", "Democ
     stop("Selected types must be in: 'Pure Democracy', 'Pure Monarchy', 'Democratic Monarchy', 'Communist', 'Other'")
   }
 
-  filt <- country_meta_data |>
+  filt <- load_data() |>
     filter(gov_type %in% types)
 
   return(filt)
