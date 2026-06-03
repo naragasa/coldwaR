@@ -20,7 +20,7 @@ plot_gdp_by_category <- function(cat_var) {
                       "gov_type" = "Government Type",
                       .default = var_name)
 
-  country_meta_data |>
+  load_data() |>
     filter(!is.na({{ cat_var }})) |>
     ggplot(aes(y = {{ cat_var }}, x = GDP, fill = {{ cat_var }})) +
     geom_density_ridges(alpha = 0.5) +

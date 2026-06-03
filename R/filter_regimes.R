@@ -13,7 +13,7 @@ filter_regimes <- function(regimes = c("Parliamentary democracy", "Civilian dict
     stop("Selected types must be in: 'Parliamentary democracy', 'Civilian dictatorship', 'Presidential democracy', 'Military dictatorship', 'Mixed democratic', 'Royal dictatorship'")
   }
 
-  filt <- country_meta_data |>
+  filt <- load_data() |>
     filter(regime_category %in% regimes)
 
   return(filt)
