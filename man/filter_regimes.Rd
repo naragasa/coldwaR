@@ -11,7 +11,7 @@ filter_regimes(
 )
 }
 \arguments{
-\item{types}{Optional character vector of regime categories to be selected.}
+\item{regimes}{Optional character vector of regime categories to be selected.}
 }
 \value{
 A tibble of the country_meta_data dataset filtered by selected regime categories.

@@ -18,19 +18,41 @@ knitr::opts_chunk$set(
 library(coldwaR)
 ```
 
-
 ```{r}
-plot_gdp_by_category(gov_type)
+filter_gov_types(gov_types = c("Pure Democracy", "Pure Monarchy"))
 ```
 
-> This should make a ridgeline plot showing the distributions of GDPs of different government types of countries. The `gdp` variable is specified on the x-axis, and the `gov_type` variable is specified on the y-axis.
-
+> This should return a tibble of the 2020 country meta dataset filtered where `gov_type` is equal to "Pure Democracy" or "Pure Monarchy".
 
 ```{r}
-summarize_pop_by_category(regime_category)
+filter_regimes(regimes = c("Parliamentary democracy", "Presidential democracy", "Mixed democratic"))
 ```
 
-> This should make a summary table showing the distributions of populations of the six different regime categories of countries (including civilian dictatorship, presidential democracy, parliamentary democracy, military dictatorship, mixed democratic, and royal dictatorship. This summary table should display the different regime categories, the count for each of the regime categories, the mean population for each of the regime categories, the median population for each of the regime categories, the standard deviation for each of the regime categories, the standard error for each of the regime categories, the minimum population for each of the regime categories, and the maximum population for each of the regime categories.
+> This should return a tibble of the 2020 country meta dataset filtered where `regime_category` is equal to "Parliamentary democracy", "Presidential democracy", or "Mixed democratic".
+
+```{r}
+plot_gdp_by_category(cat_var = 'gov_type', gov_types = c('Pure Democracy', 'Pure Monarchy', 'Democratic Monarchy', 'Communist'))
+```
+
+> This should make a ridgeline plot showing the distributions of country GDPs by 4 specified government types. The `gdp` variable is specified on the x-axis, and the `gov_type` variable is specified on the y-axis.
+
+```{r}
+plot_pop_by_category(cat_var = 'regime_category', regimes = c('Parliamentary democracy', 'Civilian dictatorship', 'Presidential democracy', 'Military dictatorship', 'Mixed democratic'))
+```
+
+> This should make a ridgeline plot showing the distributions of country populations by 5 specified regime types. The `population` variable is specified on the x-axis, and the `regime_category` variable is specified on the y-axis.
+
+```{r}
+summarize_gdp_by_category(cat_var = 'regime_category', regimes = c('Civilian dictatorship', 'Military dictatorship', 'Royal dictatorship'))
+```
+
+> This should make a summary table showing the distributions of country GDPs by 3 specified regime types. This summary table should display the different regime categories, the count for each of the regime categories, the mean GDP, the median GDP, the standard deviation, the standard error, the minimum GDP, and the maximum GDP for each of the regime categories.
+
+```{r}
+summarize_pop_by_category(cat_var = 'gov_type', gov_types = c('Pure Democracy', 'Communist', 'Other'))
+```
+
+> This should make a summary table showing the distributions of country populations by 3 specified government types. This summary table should display the different government types, the count for each of the government types, the mean population, the median population, the standard deviation, the standard error, the minimum population, and the maximum population for each of the government types.
 
 
 ```{r}
