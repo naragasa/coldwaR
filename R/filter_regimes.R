@@ -7,6 +7,8 @@
 #' @return A tibble of the country_meta_data dataset filtered by selected regime categories.
 #'
 #' @importFrom dplyr filter
+#'
+#' @export
 
 filter_regimes <- function(regimes = c("Parliamentary democracy", "Civilian dictatorship", "Presidential democracy", "Military dictatorship", "Mixed democratic", "Royal dictatorship")){
   if (!all(regimes %in% c("Parliamentary democracy", "Civilian dictatorship", "Presidential democracy", "Military dictatorship", "Mixed democratic", "Royal dictatorship"))){

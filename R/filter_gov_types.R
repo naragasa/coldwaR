@@ -7,6 +7,8 @@
 #' @return A tibble of the country_meta_data dataset filtered by selected government types.
 #'
 #' @importFrom dplyr filter
+#'
+#' @export
 
 filter_gov_types <- function(gov_types = c("Pure Democracy", "Pure Monarchy", "Democratic Monarchy", "Communist", "Other")){
   if (!all(gov_types %in% c("Pure Democracy", "Pure Monarchy", "Democratic Monarchy", "Communist", "Other"))){

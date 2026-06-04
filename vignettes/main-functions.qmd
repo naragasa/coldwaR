@@ -18,6 +18,17 @@ knitr::opts_chunk$set(
 library(coldwaR)
 ```
 
+```{r}
+filter_gov_types(gov_types = c("Pure Democracy", "Pure Monarchy"))
+```
+
+> This should return a tibble of the 2020 country meta dataset filtered where `gov_type` is equal to "Pure Democracy" or "Pure Monarchy".
+
+```{r}
+filter_regimes(regimes = c("Parliamentary democracy", "Presidential democracy", "Mixed democratic"))
+```
+
+> This should return a tibble of the 2020 country meta dataset filtered where `regime_category` is equal to "Parliamentary democracy", "Presidential democracy", or "Mixed democratic".
 
 ```{r}
 plot_gdp_by_category(cat_var = 'gov_type', gov_types = c('Pure Democracy', 'Pure Monarchy', 'Democratic Monarchy', 'Communist'))
