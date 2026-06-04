@@ -4,10 +4,14 @@
 \alias{plot_gdp_by_category}
 \title{Plot between a categorical variable and log(GDP)}
 \usage{
-plot_gdp_by_category(cat_var)
+plot_gdp_by_category(cat_var, gov_types = NULL, regimes = NULL)
 }
 \arguments{
-\item{cat_var}{A categorical variable.}
+\item{cat_var}{A categorical variable between 'gov_type' and 'regime_category'.}
+
+\item{gov_types}{Optional character vector of government types to be selected.}
+
+\item{regimes}{Optional character vector of regime categories to be selected.}
 }
 \value{
 A ridgeline plot.

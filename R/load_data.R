@@ -11,5 +11,6 @@
 #'
 #' @export
 load_data <- function(){
-  arrow::read_parquet(file = "inst/extdata/country_meta_data.parquet")
+  path <- system.file("extdata", "country_meta_data.parquet", package = "coldwaR")
+  arrow::read_parquet(file = path)
 }

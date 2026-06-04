@@ -2,7 +2,7 @@
 #'
 #' Input a vector of regime_category levels to be selected.
 #'
-#' @param types Optional character vector of regime categories to be selected.
+#' @param regimes Optional character vector of regime categories to be selected.
 #'
 #' @return A tibble of the country_meta_data dataset filtered by selected regime categories.
 #'

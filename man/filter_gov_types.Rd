@@ -5,12 +5,12 @@
 \title{Filter government types in country_meta_data.}
 \usage{
 filter_gov_types(
-  types = c("Pure Democracy", "Pure Monarchy", "Democratic Monarchy", "Communist",
+  gov_types = c("Pure Democracy", "Pure Monarchy", "Democratic Monarchy", "Communist",
     "Other")
 )
 }
 \arguments{
-\item{types}{Optional character vector of government types to be selected.}
+\item{gov_types}{Optional character vector of government types to be selected.}
 }
 \value{
 A tibble of the country_meta_data dataset filtered by selected government types.
