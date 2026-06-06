@@ -1,6 +1,6 @@
 test_that("summarize GDP by category works", {
 
-  result <- summarize_gdp_by_category(regime_category)
+  result <- summarize_gdp_by_category("regime_category")
 
   expect_s3_class(result, "gt_tbl")
 

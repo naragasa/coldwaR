@@ -5,6 +5,8 @@ vignette: >
   %\VignetteIndexEntry{main-functions}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
+execute: 
+  warning: false
 ---
 
 ```{r, include = FALSE}
@@ -56,7 +58,7 @@ summarize_pop_by_category(cat_var = 'gov_type', gov_types = c('Pure Democracy', 
 
 
 ```{r}
-test_gdp_by_category(regime_category)
+log_welch_anova(quant_var = "GDP", cat_var = "regime_category")
 ```
 
 > This should make a Welch's ANOVA table for log(GDP) and regime category. This ANOVA table should display the F-statistic, the numerator df, the denominator df, and the p-value.
